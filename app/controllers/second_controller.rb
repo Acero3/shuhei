@@ -1,4 +1,4 @@
-class SecondController < ActionController
+class SecondController < ApplicationController
     def index
         
     end
