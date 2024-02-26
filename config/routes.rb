@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   get "/second", to: "second#index"
   #URLの /tasks にアクセスしたら、 TasksControllerのindexアクションを呼び出す
   get "/tasks", to: "tasks#index"
+
+  get "tasks/:id", to: "tasks#show", as:"task"
 end
