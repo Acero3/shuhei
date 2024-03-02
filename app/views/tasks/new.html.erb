@@ -1,0 +1,15 @@
+<h1>タスク新規作成</h1>
+<%#「作成」ボタンを押すと/tasksにPOSTメソッドでリクエストする　%>
+<form action="/tasks" method="post">
+    <div>
+        <label>タスク名</label>
+        <input type="text" name="task_name" required>
+    </div>
+    <div>
+        <input type="submit" name="commit" value="作成">
+    </div>
+</form>
+
+<div>
+    <a href="/tasks">タスク一覧へ戻る</a>
+</div>
