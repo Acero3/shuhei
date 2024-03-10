@@ -10,5 +10,12 @@ Rails.application.routes.draw do
   get "/tasks/new", to: "tasks#new"
 
   get "tasks/:id", to: "tasks#show", as:"task"
+  #postのものはデータ更新だけなのでviewはいらない
   post "/tasks", to: "tasks#create"
+
+  #タスクの編集画面
+  get "/tasks/:id/edit", to: "tasks#edit"
+  #タスクの更新
+  post "/tasks/:id", to: "tasks#update"
+
 end
