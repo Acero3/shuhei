@@ -1,0 +1,14 @@
+<h1>編集する</h1>
+<form action="/tasks/<%= @task.id %>" method="post">
+    <div>
+        <label>タスク名</label>
+        <input type="text" value="<%= @task.name %>" name="task_name" required>
+    </div>
+    <div>
+        <input type="submit" name="commit" value="更新">
+    </div>
+</form>
+
+<div>
+    <a href="/tasks">タスク一覧へ戻る</a>
+</div>

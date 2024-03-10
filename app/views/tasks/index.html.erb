@@ -1,6 +1,11 @@
 <h1>タスク一覧</h1>
 <% @tasks.each do |task| %>
-    <p><%= task.id %>. <%= task.name %> <%= link_to "詳細を見る", task_path(task.id) %></p>
+    <p>
+        <%= task.id %>. <%= task.name %> <%= link_to "詳細を見る", task_path(task.id) %>
+        <a href="/tasks/<%=task.id %>/edit">
+        <i class="fa-regular fa-pen-to-square" style="margin-left: 30px;"></i>
+        </a>
+    </p>
     <hr>
 <% end %>
 
