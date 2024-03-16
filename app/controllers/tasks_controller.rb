@@ -34,4 +34,13 @@ class TasksController < ApplicationController
         #タスク一覧ページへリダイレクトする
         redirect_to "/tasks"
     end
+
+    def delete
+        #URLのidを元にDBからタスクを検索してtask変数に代入する
+        task = Task.find(params[:id])
+        #タスクを削除する
+        task.destroy!
+        #タスク一覧ページへリダイレクトする
+        redirect_to "/tasks"
+    end
 end
