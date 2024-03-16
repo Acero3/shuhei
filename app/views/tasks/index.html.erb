@@ -5,6 +5,9 @@
         <a href="/tasks/<%=task.id %>/edit">
         <i class="fa-regular fa-pen-to-square" style="margin-left: 30px;"></i>
         </a>
+        <a href="/tasks/<%= task.id %>" data-turbo-method="delete">
+            <i class="fa-solid fa-trash"></i>
+        </a>
     </p>
     <hr>
 <% end %>

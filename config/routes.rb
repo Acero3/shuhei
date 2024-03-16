@@ -18,4 +18,6 @@ Rails.application.routes.draw do
   #タスクの更新
   post "/tasks/:id", to: "tasks#update"
 
+  #タスクの削除(DBに編集を加えるのでpost)
+  delete "/tasks/:id", to: "tasks#delete"
 end
