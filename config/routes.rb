@@ -20,4 +20,10 @@ Rails.application.routes.draw do
 
   #タスクの削除(DBに編集を加えるのでpost)
   delete "/tasks/:id", to: "tasks#delete"
+
+  #タスク一覧取得API
+  get "/api/tasks", to: "api/tasks#index"
+
+  #タスク詳細取得API
+  get "/api/tasks/:id", to: "api/tasks#show"
 end
